@@ -11,6 +11,7 @@ White flash after crossing into the null zone
 Fun celebration lights for celebation button
 
 (For shooter/rings)
+Pulsing alliance color when driving
 Green light bulid up when preparing to shoot
 Green lights rapidly fall after shooting
 Pacman animation when disabled
