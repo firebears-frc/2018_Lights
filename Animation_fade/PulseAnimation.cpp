@@ -2,17 +2,10 @@
 #include "PulseAnimation.h"
 
 PulseAnimation::PulseAnimation() {
-  colorCount = 8;
+  colorCount = 2;
   colorList = (uint32_t*)malloc(colorCount * sizeof(uint32_t));
-  colorList[0] = 0xFF0000;
-  colorList[1] = 0xFFF000;
-  colorList[2] = 0xFFFF00;
-  colorList[3] = 0x00FF00;
-  colorList[4] = 0x0000FF;
-  colorList[5] = 0x880088;
-  colorList[6] = 0x888888;
-  colorList[7] = 0xFF0000;
-  
+  colorList[0] = 0x174702;
+  colorList[1] = 0x2E9800;
 }
 
 PulseAnimation::PulseAnimation(int n) {
@@ -21,14 +14,8 @@ PulseAnimation::PulseAnimation(int n) {
   for (int i=0; i<colorCount; i++) {
     colorList[i] = 0x000000;
   }
-  colorList[0] = 0xFF0000;
-  colorList[1] = 0xFFF000;
-  colorList[2] = 0xFFFF00;
-  colorList[3] = 0x00FF00;
-  colorList[4] = 0x0000FF;
-  colorList[5] = 0x880088;
-  colorList[6] = 0x888888;
-  colorList[7] = 0xFF0000;
+  colorList[0] = 0x174702;
+  colorList[1] = 0x2E9800;
 }
 
 void PulseAnimation::setColor(int i, uint32_t c) {
@@ -59,8 +46,8 @@ void PulseAnimation::draw(Adafruit_NeoPixel *strip) {
 */
 int PulseAnimation::f(unsigned long t) {
   float theta = 6.283 * t / timeCycle;    // Angle in radians
-  float s = (sin(theta) + 3.0) / 2.0;     // Value from 0.0 to 1.0
-  return s * 250;
+  float s = (sin(theta) + 1.0) / 2.0;     // Value from 0.0 to 1.0
+  return s * 256;
 }
 
 
