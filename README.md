@@ -24,3 +24,8 @@ Fire animation when disabled
 Pulse animation of alliance color when empty
 Green pulse when holding cube
 Fire animation when disabled
+
+Pulse colors
+Red (FF0000), (9E0000)
+Blue (4F009E), (10009E)
+Green (174702), (2E9800)
