@@ -1,14 +1,14 @@
-#ifndef PulseAnimation_h
-#define PulseAnimation_h
+#ifndef FireAnimation_h
+#define FireAnimation_h
 #include <Animation.h>
 
 /**
  *
  */
-class PulseAnimation : public Animation {
+class FireAnimation : public Animation {
   public:
-    PulseAnimation();
-    PulseAnimation(int n);
+    FireAnimation();
+    FireAnimation(int n);
     void reset(Adafruit_NeoPixel *strip);
     void draw(Adafruit_NeoPixel *strip);
     void setColor(int i, uint32_t c);
