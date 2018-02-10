@@ -1,22 +1,19 @@
 #include <Adafruit_NeoPixel.h>
 #include <PixelStrip.h>
 #include <Animation.h>
-#include "FireAnimation.h"
+#include "Celebrate.h"
 
-const int PIN = 1;
+const int PIN = 7;
 const int NUM_PIXELS = 8;
-const int BRIGHTNESS = 250;
-
+const int BRIGHTNESS = 160;
 PixelStrip *strip = new PixelStrip(NUM_PIXELS, PIN, NEO_GRB);
-FireAnimation *animation;
-
+Celebrate *animation;
 void setup() {
-  animation = new FireAnimation();
+  animation = new Celebrate();
   strip->setup();
   strip->setBrightness(BRIGHTNESS);
   strip->setAnimation(animation);
 }
-
 void loop() {
   strip->draw();
   strip->show();
