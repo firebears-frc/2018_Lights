@@ -3,8 +3,8 @@
 #include <Animation.h>
 #include "PacmanAnimation.h"
 
-const int PIN = 7;
-const int NUM_PIXELS = 8;
+const int PIN = 1;
+const int NUM_PIXELS = 121;
 const int BRIGHTNESS = 67;
 
 PixelStrip *strip = new PixelStrip(NUM_PIXELS, PIN, NEO_GRB);
