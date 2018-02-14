@@ -7,6 +7,7 @@
 */
 class BuildUp : public Animation {
   public:
+  BuildUp();
     void reset(Adafruit_NeoPixel *strip);
     void draw(Adafruit_NeoPixel *strip);
     int currentPixel = 0;

@@ -1,12 +1,15 @@
 #include <Adafruit_NeoPixel.h>
 #include "BuildUp.h"
-
-void BuildUp::reset(Adafruit_NeoPixel *strip) {
-  strip->begin();
+BuildUp::BuildUp() {
   strip->clear();
   strip->show();
   setTimeout(1000);
   currentPixel = 0;
+}
+
+void BuildUp::reset(Adafruit_NeoPixel *strip) {
+  strip->begin();
+  
 }
 
 void BuildUp::draw(Adafruit_NeoPixel *strip) {

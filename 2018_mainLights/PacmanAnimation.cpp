@@ -1,10 +1,14 @@
 #include <Adafruit_NeoPixel.h>
 #include "PacmanAnimation.h"
 
+PacmanAnimation::PacmanAnimation(){
+  setTimeout(waitTime);
+  currentPixel = 0; 
+}
+
 void PacmanAnimation::reset(Adafruit_NeoPixel *strip) {
   strip->begin();
-  setTimeout(waitTime);
-  currentPixel = 0;
+  
 }
 
 void PacmanAnimation::draw(Adafruit_NeoPixel *strip) {

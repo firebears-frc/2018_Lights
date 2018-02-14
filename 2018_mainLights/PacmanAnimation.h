@@ -7,6 +7,7 @@
 */
 class PacmanAnimation : public Animation {
   public:
+    PacmanAnimation();
     void reset(Adafruit_NeoPixel *strip);
     void draw(Adafruit_NeoPixel *strip);
     unsigned long waitTime = 500;

@@ -1,13 +1,15 @@
 #include <Adafruit_NeoPixel.h>
 #include "FlashFall.h"
-
+FlashFall::FlashFall() {
+  setTimeout(waitTime);
+  state = 0;
+  currentPixel = strip-> numPixels() - 1;
+}
 int pixelState = 0;
 
 void FlashFall::reset(Adafruit_NeoPixel *strip) {
   strip->begin();
-  setTimeout(waitTime);
-  state = 0;
-  currentPixel = strip-> numPixels() - 1;
+  
 }
 
 void FlashFall::draw(Adafruit_NeoPixel *strip) {
