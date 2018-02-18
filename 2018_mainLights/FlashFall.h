@@ -7,7 +7,6 @@
 */
 class FlashFall : public Animation {
   public:
-  FlashFall();
     void reset(Adafruit_NeoPixel *strip);
     void draw(Adafruit_NeoPixel *strip);
     int currentPixel = 7;
