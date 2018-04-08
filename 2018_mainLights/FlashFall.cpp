@@ -18,10 +18,10 @@ void FlashFall::draw(Adafruit_NeoPixel *strip) {
         strip->setPixelColor(i, 0x174702);
       }
       state = 1;
-      setTimeout(200);
+      setTimeout(50);
     } else if (state == 1) {
       for (int i = 0; i < strip->numPixels(); i = i + 1) {
-        strip->setPixelColor(i, 0xFFFFFF);
+        strip->setPixelColor(i, 0xBC00FF);
       }
       state = 2;
       setTimeout(500);
@@ -30,11 +30,11 @@ void FlashFall::draw(Adafruit_NeoPixel *strip) {
         strip->setPixelColor(i, 0x174702);
       }
       state = 3;
-      setTimeout(500);
+      setTimeout(10);
     } else {
       strip->setPixelColor(currentPixel, 0x000000);
       currentPixel = currentPixel - 1;
-      setTimeout(100);
+      setTimeout(10);
     }
   }
 }

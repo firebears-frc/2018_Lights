@@ -1,3 +1,5 @@
+#include <AdaFruit_NeoPixel.h>
+
 #include <Adafruit_NeoPixel.h>
 #include <PixelStrip.h>
 #include <Animation.h>
@@ -59,8 +61,8 @@ void setup() {
   ((FadeAnimation*)animation[RED_ANIMATION])->setColor (0, 0xFF0000);
   ((FadeAnimation*)animation[RED_ANIMATION])->setColor (1, 0x9E0000);
   // set up all PixelStrips
-  strip[SHOOTER_STRIP] = new PixelStrip(61, 1, NEO_GRB);
-  strip[GRABBER_STRIP] = new PixelStrip(65, 3, NEO_GRB);
+  strip[SHOOTER_STRIP] = new PixelStrip(78, 1, NEO_GRBW);
+  strip[GRABBER_STRIP] = new PixelStrip(24, 3, NEO_GRB);
   strip[BASE_STRIP] = new PixelStrip(121, 4, NEO_GRB);
   for (int s = 0; s < MAX_PIXELSTRIPS; s++) {
     strip[s]->setup();

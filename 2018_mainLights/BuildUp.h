@@ -10,7 +10,7 @@ class BuildUp : public Animation {
     void reset(Adafruit_NeoPixel *strip);
     void draw(Adafruit_NeoPixel *strip);
     int currentPixel = 0;
-    unsigned long waitTime = 250;
+    unsigned long waitTime = 10;
     unsigned long color = 0x008800;
   private:
 };

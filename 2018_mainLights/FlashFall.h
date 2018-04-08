@@ -11,7 +11,7 @@ class FlashFall : public Animation {
     void draw(Adafruit_NeoPixel *strip);
     int currentPixel = 7;
     int state = 0;
-    unsigned long waitTime = 1000;
+    unsigned long waitTime = 10;
     unsigned long color = 0x008800;
   private:
 };
