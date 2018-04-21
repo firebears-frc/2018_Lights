@@ -33,7 +33,8 @@ void FlashFall::draw(Adafruit_NeoPixel *strip) {
       setTimeout(10);
     } else {
       strip->setPixelColor(currentPixel, 0x000000);
-      currentPixel = currentPixel - 1;
+       strip->setPixelColor(currentPixel - 1, 0x000000);
+      currentPixel = currentPixel - 2;
       setTimeout(10);
     }
   }

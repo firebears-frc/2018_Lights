@@ -13,7 +13,9 @@ void BuildUp::reset(Adafruit_NeoPixel *strip) {
 void BuildUp::draw(Adafruit_NeoPixel *strip) {
   if (isTimedout()) {
     strip->setPixelColor(currentPixel, 0x174702);
-    currentPixel = currentPixel + 1;
+     strip->setPixelColor(currentPixel + 1, 0x174702);
+      strip->setPixelColor(currentPixel + 2, 0x174702);
+    currentPixel = currentPixel + 3;
     setTimeout(waitTime);
   }
 }
