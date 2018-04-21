@@ -16,7 +16,7 @@ Green light build up when preparing to shoot
 Green lights rapidly fall after shooting
 Pacman animation when disabled
 
-(For base)
+(For halo)
 Pulsing alliance color when active
 Fire animation when disabled
 
@@ -29,3 +29,5 @@ Pulse colors
 Red (FF0000), (9E0000)
 Blue (4F009E), (10009E)
 Green (174702), (2E9800)
+
+
