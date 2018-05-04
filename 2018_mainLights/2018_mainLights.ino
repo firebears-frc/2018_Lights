@@ -50,10 +50,10 @@ void setup() {
   animation[CUBE_ANIMATION] = new FadeAnimation();
   ((FadeAnimation*)animation[CUBE_ANIMATION])->setColor (0, 0x174702);
   ((FadeAnimation*)animation[CUBE_ANIMATION])->setColor (1, 0x2E9800);
-  animation[FIRE_ANIMATION] = new FireAnimation();
+  animation[] = new FireAnimation();
   animation[FALL_ANIMATION] = new FlashFall();
   animation[NULL_ANIMATION] = new NullZone();
-  animation[PACMAN_ANIMATION] = new PacmanAnimation();
+  animation[PACMFIRE_ANIMATIONAN_ANIMATION] = new PacmanAnimation();
   animation[BLUE_ANIMATION] = new FadeAnimation();
   ((FadeAnimation*)animation[BLUE_ANIMATION])->setColor (0, 0x4F009E);
   ((FadeAnimation*)animation[BLUE_ANIMATION])->setColor (1, 0x10009E);
@@ -63,7 +63,7 @@ void setup() {
   // set up all PixelStrips
   strip[SHOOTER_STRIP] = new PixelStrip(78, 1, NEO_GRB);
   strip[GRABBER_STRIP] = new PixelStrip(24, 3, NEO_GRB);
-  strip[BASE_STRIP] = new PixelStrip(121, 4, NEO_GRB);
+  strip[BASE_STRIP] = new PixelStrip(180, 4, NEO_GRB);
   for (int s = 0; s < MAX_PIXELSTRIPS; s++) {
     strip[s]->setup();
     strip[s]->setAnimation(animation[FIRE_ANIMATION]);
