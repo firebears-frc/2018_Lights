@@ -1,5 +1,3 @@
-#include <AdaFruit_NeoPixel.h>
-
 #include <Adafruit_NeoPixel.h>
 #include <PixelStrip.h>
 #include <Animation.h>
@@ -11,8 +9,14 @@
 #include "FlashFall.h"
 #include "NullZone.h"
 #include "PacmanAnimation.h"
+#include "RlowAnimation.h"
+#include "RmidAnimation.h"
+#include "RhighAnimation.h"
+#include "BlowAnimation.h"
+#include "BmidAnimation.h"
+#include "BhighAnimation.h"
 
-const int MAX_ANIMATIONS = 9;
+const int MAX_ANIMATIONS = 15;
 const int MAX_PIXELSTRIPS = 3;
 const int BRIGHTNESS = 60;
 const int I2C_ADDRESS = 4;
@@ -25,6 +29,14 @@ const int NULL_ANIMATION = 5;
 const int PACMAN_ANIMATION = 6;
 const int BLUE_ANIMATION = 7;
 const int RED_ANIMATION = 8;
+const int RLOW_ANIMATION = 9;
+const int RMID_ANIMATION = 10;
+const int RHIGH_ANIMATION = 11;
+const int BLOW_ANIMATION = 12;
+const int BMID_ANIMATION = 13;
+const int BHIGH_ANIMATION = 14;
+
+
 
 const int SHOOTER_STRIP = 0;
 const int GRABBER_STRIP = 1;
@@ -50,20 +62,27 @@ void setup() {
   animation[CUBE_ANIMATION] = new FadeAnimation();
   ((FadeAnimation*)animation[CUBE_ANIMATION])->setColor (0, 0x174702);
   ((FadeAnimation*)animation[CUBE_ANIMATION])->setColor (1, 0x2E9800);
-  animation[] = new FireAnimation();
+  animation[FIRE_ANIMATION] = new FireAnimation();
   animation[FALL_ANIMATION] = new FlashFall();
   animation[NULL_ANIMATION] = new NullZone();
-  animation[PACMFIRE_ANIMATIONAN_ANIMATION] = new PacmanAnimation();
+  animation[PACMAN_ANIMATION] = new PacmanAnimation();
   animation[BLUE_ANIMATION] = new FadeAnimation();
   ((FadeAnimation*)animation[BLUE_ANIMATION])->setColor (0, 0x4F009E);
   ((FadeAnimation*)animation[BLUE_ANIMATION])->setColor (1, 0x10009E);
   animation[RED_ANIMATION] = new FadeAnimation();
   ((FadeAnimation*)animation[RED_ANIMATION])->setColor (0, 0xFF0000);
   ((FadeAnimation*)animation[RED_ANIMATION])->setColor (1, 0x9E0000);
+   animation[RLOW_ANIMATION] = new RlowAnimation();
+   animation[RMID_ANIMATION] = new RmidAnimation();
+   animation[RHIGH_ANIMATION] = new RhighAnimation();
+    animation[BLOW_ANIMATION] = new BlowAnimation();
+    animation[BMID_ANIMATION] = new BmidAnimation();
+    animation[BHIGH_ANIMATION] = new BhighAnimation();
+   
   // set up all PixelStrips
-  strip[SHOOTER_STRIP] = new PixelStrip(78, 1, NEO_GRB);
-  strip[GRABBER_STRIP] = new PixelStrip(24, 3, NEO_GRB);
-  strip[BASE_STRIP] = new PixelStrip(180, 4, NEO_GRB);
+  strip[SHOOTER_STRIP] = new PixelStrip(138, 1, NEO_GRB);
+  strip[GRABBER_STRIP] = new PixelStrip(65, 3, NEO_GRB);
+  strip[BASE_STRIP] = new PixelStrip(121, 4, NEO_GRB);
   for (int s = 0; s < MAX_PIXELSTRIPS; s++) {
     strip[s]->setup();
     strip[s]->setAnimation(animation[FIRE_ANIMATION]);
